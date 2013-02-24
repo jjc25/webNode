@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Group Apollo</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="logo"> 
+	<h1>NODE.js demo</h1>
+	<!--h2>By group Apollo</h2-->
+	</div>
+	
+	<div id="nav-bar">
+	<p><a id="main" href="./index.html">Main</a>|<a id="compbtn" href="./comparisons.html">Comparisons</a>|<a  id="tutbtn" href="./tutorial.html">Simple Tutorial</a>|<a id="demobtn" href="./demo.html">Demo</a>|<a id="aboutbtn" href="./about.html">About</a></p>
+	</div>
+	
+	<div id="content">
+	<h2>Monster panic server setup:</h2>
+	<p>To initialize the server, specific modules need to be loaded. We will require the 'http' module, 'socket.io' module and the 'node-static' module.</p>
+		<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>var app = require('http').createServer(handler),
+    io = require('socket.io').listen(app),
+    static = require('node-static'); // for serving files
+</code></pre>
+<p>
+The server is set to listen on port 80 and can serve files.
+</p>
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>var fileServer = new static.Server('./');
+app.listen(80);
+function handler (request, response) {
+
+    request.addListener('end', function () {
+        fileServer.serve(request, response);
+    });
+}
+</code></pre>
+	
+<p>
+After a client connects to the server, the main 'connection' function is executed and the server sends the client a copy of the current maze.
+</p>
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>
+io.sockets.on('connection', function (socket) {
+
+    //send the current state of the maze to the client
+    socket.emit('sendMaze',{
+        'maze':mazeClone
+    });
+
+</code></pre>
+<p>The server recieves a 'xymove' message from each client every 50th of a second. The server checks if a robot has eaten a dot and if so, the point is given to the robot and a message is sent to all other clients to remove the point from the screen. The server also transmits every clients movement data to every other client so they can update their game information.</p>
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>
+    socket.on('xymove', function (data) {
+
+            clients[data.id]=data;
+        if (data.robot==1){
+            var xGrid=data.x;
+            var yGrid=data.y;
+            xGrid=Math.floor(xGrid/gridSize);
+            yGrid=Math.floor(yGrid/gridSize);
+                //check if point available,if so send it to player
+            if (mazeClone[yGrid][xGrid]==2){
+                socket.emit('point',{'x':xGrid,
+                    'y':yGrid});
+                console.log(&quot;giving point to &quot;+data.id);
+            socket.broadcast.emit('removePoint',{'x':xGrid,
+                    'y':yGrid});
+            mazeClone[yGrid][xGrid]=0;
+            points-=1;            
+if (points==0){    
+resetMaze();
+}
+            }                
+        }
+        // This line sends the event (broadcasts it)
+        // to everyone except the originating client.
+        socket.broadcast.emit('xymoving', data);
+    });
+
+</code></pre>
+</div>
+</body>
+</html>

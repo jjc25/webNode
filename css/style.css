@@ -1,0 +1,23 @@
+
+#logo{margin-left:1em;}
+body{font-family: 'PT Sans Narrow', sans-serif;}
+#nav-bar{float: right; margin:-80px 50px;font-size: 150%;}
+#nav-bar a{text-decoration: none; margin-left: 10px; margin: 10px;}
+#nav-bar a:link{color: black;}
+#nav-bar a:visited{color: black;}
+#nav-bar a:hover{color: red;}
+#nav-bar a:active{color: black;}
+#content{ height: 500px;
+font-family: 'PT Sans Narrow', sans-serif;
+border-top:1px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-style: solid;
+	border-color:black;
+ margin:1em 1em 1em 1em;
+  padding: 10px;
+
+   font-size: 110%;}
+
+ 
