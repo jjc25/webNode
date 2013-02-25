@@ -1,7 +1,7 @@
 
 #logo{margin-left:1em;}
 body{font-family: 'PT Sans Narrow', sans-serif;}
-#nav-bar{float: right; margin:-80px 50px;font-size: 150%;}
+#nav-bar{float: right; margin:-80px 10px;font-size: 150%;}
 #nav-bar a{text-decoration: none; margin-left: 10px; margin: 10px;}
 #nav-bar a:link{color: black;}
 #nav-bar a:visited{color: black;}
