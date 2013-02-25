@@ -48,7 +48,7 @@ io.sockets.on('connection', function (socket) {
     });
 
 </code></pre>
-<p>The server recieves a 'xymove' message from each client every 50th of a second. The server checks if a robot has eaten a dot and if so, the point is given to the robot and a message is sent to all other clients to remove the point from the screen. The server also transmits every clients movement data to every other client so they can update their game information.</p>
+<p>The server receives an'xymove' message from each client every 50th of a second. The server checks if a robot has eaten a dot and if so, the point is given to the robot and a message is sent to all other clients to remove the point from the screen. The server also transmits every clients movement data to every other client so they can update their game information.</p>
 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>
     socket.on('xymove', function (data) {
 
