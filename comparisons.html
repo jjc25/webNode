@@ -52,8 +52,6 @@
                 <tr><td><strong>Node.js</strong></td><td><strong>Rails</strong></td></tr>
                 <tr><td><ul><li>The database is complex in terms of associations.</li><li>The app structure is well defined.</li><li>Many developers in parallel keep the DB up-to-date with migrations</li></ul></td><td><ul><li>APIs</li><li>Real-time Web/mobile apps.</li><li>Application that should scale to lots of concurrent requests</li></td></tr>
                 </table>
-				
-				
 	<h2>Spring Tool Suite Framework</h2>			
 	<p>&nbsp&nbspThe Spring Tool Suite Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications. A key element of Spring is its infrastructural support at the application level, meaning that Spring focuses on decoupling the web application through injecting values at run time. This allows teams to focus on application-level business logic, without having to worry about static specifications or other class implementations.</p>
 	<p>&nbsp&nbspSpring Tool Suite allows a team of developers to perform dependency injection with XML and annotation-based configuration styles. Meaning that a team can create methods with parameters that are injected at run time, not on compile time. This gives the ability for someone who knows nothing of another class to create their class and only have to worry about injecting the proper values such that the web applications starts.  Advantage of having parameters being injected at run time is that another team (like SV&V or Engineering) can inject their own values via a configurations table. Ex: A datasource. Using Node.js this isn’t the case. We wouldn’t be able to use a configuration file to determine how certain classes need to be initiated at server start up.  </p>			
@@ -61,7 +59,6 @@
 Once a Controller decides what to do with the request, we can use a memory cache (memchace) to retrieve common output values. As stated before, since Spring is annotation based a annotation can be used to reference a memechace. We can inject memcache size, timeout value and what values to cache all from a configuration file. ich testing facilities for unit tests as well as for integration tests. JUnit tests are easy to create. Since the MVC model is used within Spring, we can mock out various services within the web application to create effective unit tests.</p>	
 	<p>&nbsp&nbsp<strong>Summary</strong></p>
 	<p>&nbsp&nbspAs you can note Spring Tool Suite is used more for Enterprise web applications where multiple teams are involved in writing code. Since dependency injection is a big aspect of STS we do not have to rely on having to create a new build of our server if we want different values for certain parameters. All we would have to do is change the configuration file and restart the server.</p>
-	</div>
-	
+	</div>	
 </body>
 </html>
