@@ -59,6 +59,64 @@
 Once a Controller decides what to do with the request, we can use a memory cache (memchace) to retrieve common output values. As stated before, since Spring is annotation based a annotation can be used to reference a memechace. We can inject memcache size, timeout value and what values to cache all from a configuration file. ich testing facilities for unit tests as well as for integration tests. JUnit tests are easy to create. Since the MVC model is used within Spring, we can mock out various services within the web application to create effective unit tests.</p>	
 	<p>&nbsp&nbsp<strong>Summary</strong></p>
 	<p>&nbsp&nbspAs you can note Spring Tool Suite is used more for Enterprise web applications where multiple teams are involved in writing code. Since dependency injection is a big aspect of STS we do not have to rely on having to create a new build of our server if we want different values for certain parameters. All we would have to do is change the configuration file and restart the server.</p>
+	
+	<h2>Node.js vs Django & PHP:</h2>
+
+<p>&nbsp&nbspBeside Node.js, there are many alternatives out there for the backend programming, among which, PHP is one of the most traditional choice, and Django is another one which has gained much popularity recent years. Why do we choose Node.js as our first choice when implementing backend? Below i will use PHP and Django as comparisons to show why Node.js won the match in our mind.</p>
+
+<p><strong>1.To simplify web developers daily work and provide a steep learning curve</strong></p>
+	
+	<p>&nbsp&nbspNormally, when developers want to step into the field of web development, especially 
+	dynamic web developments(involving database). Not only a developer need to learn the 
+	front-end design, which means at least HTML, CSS and JavaScript, but also the backend
+	programming. People may choose PHP or Python(if using Django) as the server-side 
+            language. Regardless which one is chosen, most developers will find it easy to learn
+            the front end design. In other word, they learn HTML, CSS and JavaScript without 
+            problem. But when it comes to the backend, they may encounter problems, no matter
+            being confused about the architecture or the needs of spending time to learn another 
+           language(PHP or Python) to implement the server side structure.</p>
+
+	<p>&nbsp&nbspNode.js solves the problem by taking the advantage of the fact that most web 
+            developers are familiar with JavaScript. If a developer has a basic understanding of 
+            JavaScript, he/she will easy to go the next step--backend design. By using Node.js,
+            a developer will use same language and syntax for both frontend and backend, just doing
+	different tasks£®There is no need to waste much more time to learn another language. In
+	turn it provides a steep learning curve.</p>
+
+<p><strong>2.multithreaded programing vs event-driven programing</strong></p>
+	
+	<ul><li><strong>Fact:</strong>traditional programming language does I/O the same way as it does local function</li>
+	<li><strong>calls:</strong> processing cannot continue until an operation finishes.</li></ul>
+	
+	<p>&nbsp&nbspTo improves the user¡¯s experience, there are many solutions were invented, like
+             multi-processes or multithreaded programming. The purpose is to isolate each users so
+             that one user won¡¯t be influenced by another with a slow I/O operations. PHP and Django
+	use multithreaded programming. It¡¯s better than multi-process. But sometime it doesn¡¯t
+            scale well and will place a big burden on the processor when handling too many users.
+	Also, it¡¯s not easy to learn multithreaded programming. A developer has to carefully deal
+            with semaphores to decrease the risks of deadlocks.</p>
+
+
+
+
+	<p>&nbsp&nbspNode.js uses JavaScript¡¯s event-driven mechanism which has a big advantage.
+            Event-driven programming is a programming style whereby the flow of execution is
+            determined by events. Events are handled by event handlers or event callbacks. An event
+            callback is a function that is invoked when something significant happens ¡ª such as
+when the result of a database query is available or when the user clicks on a button. This 
+mechanism significantly decreases the overhead and ease the developers¡¯ work. </p>
+
+<p><strong>3.More freestyle</strong></p>
+
+<p>&nbsp&nbspBy using Django, a developer can use the the build-in http server the framework provides.
+This ease the developer¡¯s work in some ways. However if the developer want to change
+something or customize the server, he/her has to dive deeply to find the right places
+and figure out how to do that. </p>
+
+<p>&nbsp&nbspUsing Node.js, developers will build the full stack of the web applications by themselves,
+but it¡¯s not hard. They freely created the http server, view logic or request handler as they
+need. By building the web application, they are building the system at the same time.	</p>
+	
 	</div>	
 </body>
 </html>
