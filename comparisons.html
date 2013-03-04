@@ -24,6 +24,7 @@
 		<li>Little overhead by using the event-drive mechanism</li>
 		<li>Simple but yet powerful</li>
 		<li>More free style: free to customize your server</li>
+		</p>
 	</ul>
 
 
@@ -36,7 +37,7 @@
 </table>
         <p>&nbsp&nbspRuby on Rails, often shortened to Rails, is an open source full-stack web application framework for the Ruby programming language. Ruby on Rails runs on the general-purpose programming language Ruby, which predates it by more than a decade. Rails is a full-stack framework, meaning that it gives the web developer the ability to create pages and applications that gather information from the web server, talk to or query the database, and render templates out of the box. As a result, Rails features a routing system that is independent of the web server.</p>
         <table style="margin-left:25px">
-                <tr><td><strong>Node.js</strong></td><td><img src="http://www.nodehispano.com/wp-content/uploads/node_js.jpeg" alt="n.js" width="100" height="75"></td></tr></table>
+                <tr><td><strong>Node.js</strong></td><td><img src="http://www.nodehispano.com/wp-content/uploads/node_js.jpeg" alt="n.js" width="100" height="75"></td></table>
         <ul>
         <li>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. </li>
         <li>Node.js is a server bundled with low-level routing and sysadmin capabilities and written to be utilized with Javascript.</li>
@@ -48,9 +49,8 @@
         </ul>
         <p>There are many pros in Node.js and Ruby on Rails. So, when to use Node.js and when to use Rails?</p>
         <table style="margin-left:25px">
-				<tr><td><strong>Rails</strong></td><td><strong>Node.js</strong></td></tr>
-                <tr><td><ul><li>The database is complex in terms of associations.</li><li>The app structure is well defined.</li><li>Many developers in parallel keep the DB up-to-date with migrations</li></ul></td><td><ul><li>APIs</li><li>Real-time Web/mobile apps.</li><li>Application that should scale to lots of concurrent requests</li></ul></td></tr>
-
+                <tr><td><strong>Rails</strong></td><td><strong>Node.js</strong></td></tr>
+                <tr><td><ul><li>The database is complex in terms of associations.</li><li>The app structure is well defined.</li><li>Many developers in parallel keep the DB up-to-date with migrations</li></ul></td><td><ul><li>APIs</li><li>Real-time Web/mobile apps.</li><li>Application that should scale to lots of concurrent requests</li></td></tr>
                 </table>
 	<h2>Spring Tool Suite Framework</h2>			
 	<p>&nbsp&nbspThe Spring Tool Suite Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications. A key element of Spring is its infrastructural support at the application level, meaning that Spring focuses on decoupling the web application through injecting values at run time. This allows teams to focus on application-level business logic, without having to worry about static specifications or other class implementations.</p>
@@ -62,57 +62,62 @@ Once a Controller decides what to do with the request, we can use a memory cache
 	
 	<h2>Node.js vs Django & PHP:</h2>
 
-<p>&nbsp&nbspBeside Node.js, there are many alternatives out there for the backend programming, among which, PHP is one of the most traditional choice, and Django is another one which has gained much popularity recent years. Why do we choose Node.js as our first choice when implementing backend? Below i will use PHP and Django as comparisons to show why Node.js won the match in our mind.</p>
+    <p>&nbsp&nbspBeside Node.js, there are many alternatives out there for the backend programming, among which, PHP is one of the most traditional
+   	choice, and Django is another one which has gained much popularity recent years. Why do we choose Node.js as our first choice when implementing
+	backend? Below i will use PHP and Django as comparisons to show why Node.js won the match in our mind.</p>
 
-<p><strong>1.To simplify web developers daily work and provide a steep learning curve</strong></p>
+	<p><strong>1.To simplify web developers daily work and provide a steep learning curve</strong></p>
 	
 	<p>&nbsp&nbspNormally, when developers want to step into the field of web development, especially 
 	dynamic web developments(involving database). Not only a developer need to learn the 
 	front-end design, which means at least HTML, CSS and JavaScript, but also the backend
 	programming. People may choose PHP or Python(if using Django) as the server-side 
-            language. Regardless which one is chosen, most developers will find it easy to learn
-            the front end design. In other word, they learn HTML, CSS and JavaScript without 
-            problem. But when it comes to the backend, they may encounter problems, no matter
-            being confused about the architecture or the needs of spending time to learn another 
-           language(PHP or Python) to implement the server side structure.</p>
+    language. Regardless which one is chosen, most developers will find it easy to learn
+    the front end design. In other word, they learn HTML, CSS and JavaScript without 
+    problem. But when it comes to the backend, they may encounter problems, no matter
+    being confused about the architecture or the needs of spending time to learn another 
+    language(PHP or Python) to implement the server side structure.</p>
 
 	<p>&nbsp&nbspNode.js solves the problem by taking the advantage of the fact that most web 
-            developers are familiar with JavaScript. If a developer has a basic understanding of 
-            JavaScript, he/she will easy to go the next step--backend design. By using Node.js,
-            a developer will use same language and syntax for both frontend and backend, just doing
-	different tasks£®There is no need to waste much more time to learn another language. In
+    developers are familiar with JavaScript. If a developer has a basic understanding of 
+    JavaScript, he/she will easy to go the next step--backend design. By using Node.js,
+    a developer will use same language and syntax for both frontend and backend, just doing
+	different tasks. There is no need to waste much more time to learn another language. In
 	turn it provides a steep learning curve.</p>
 
-<p><strong>2.multithreaded programing vs event-driven programing</strong></p>
+    <p><strong>2.multithreaded programing vs event-driven programing</strong></p>
 	
 	<ul><li><strong>Fact:</strong>traditional programming language does I/O the same way as it does local function</li>
 	<li><strong>calls:</strong> processing cannot continue until an operation finishes.</li></ul>
 	
-	<p>&nbsp&nbspTo improves the user¡¯s experience, there are many solutions were invented, like
-             multi-processes or multithreaded programming. The purpose is to isolate each users so
-             that one user won¡¯t be influenced by another with a slow I/O operations. PHP and Django
-	use multithreaded programming. It¡¯s better than multi-process. But sometime it doesn¡¯t
-            scale well and will place a big burden on the processor when handling too many users.
-	Also, it¡¯s not easy to learn multithreaded programming. A developer has to carefully deal
-            with semaphores to decrease the risks of deadlocks.</p>
+	<p>&nbsp&nbspTo improves the user's experience, there are many solutions were invented, like
+    multi-processes or multithreaded programming. The purpose is to isolate each users so
+    that one user won't be influenced by another with a slow I/O operations. PHP and Django
+	use multithreaded programming. It's better than multi-process. But sometime it doesn't
+    scale well and will place a big burden on the processor when handling too many users.
+	Also, it's not easy to learn multithreaded programming. A developer has to carefully deal
+    with semaphores to decrease the risks of deadlocks.</p>
 
-	<p>&nbsp&nbspNode.js uses JavaScript¡¯s event-driven mechanism which has a big advantage.
-            Event-driven programming is a programming style whereby the flow of execution is
-            determined by events. Events are handled by event handlers or event callbacks. An event
-            callback is a function that is invoked when something significant happens ¡ª such as
-when the result of a database query is available or when the user clicks on a button. This 
-mechanism significantly decreases the overhead and ease the developers¡¯ work. </p>
 
-<p><strong>3.More freestyle</strong></p>
 
-<p>&nbsp&nbspBy using Django, a developer can use the the build-in http server the framework provides.
-This ease the developer¡¯s work in some ways. However if the developer want to change
-something or customize the server, he/her has to dive deeply to find the right places
-and figure out how to do that. </p>
 
-<p>&nbsp&nbspUsing Node.js, developers will build the full stack of the web applications by themselves,
-but it¡¯s not hard. They freely created the http server, view logic or request handler as they
-need. By building the web application, they are building the system at the same time.	</p>
+	<p>&nbsp&nbspNode.js uses JavaScript's event-driven mechanism which has a big advantage.
+    Event-driven programming is a programming style whereby the flow of execution is
+    determined by events. Events are handled by event handlers or event callbacks. An event
+    callback is a function that is invoked when something significant happens - such as
+    when the result of a database query is available or when the user clicks on a button. This 
+    mechanism significantly decreases the overhead and ease the developers' work. </p>
+
+    <p><strong>3.More freestyle</strong></p>
+
+    <p>&nbsp&nbspBy using Django, a developer can use the the built-in http server the framework provides.
+    This ease the developer's work in some ways. However if the developer want to change
+    something or customize the server, he/she has to dive deeply to find the right places
+    and figure out how to do that. </p>
+
+    <p>&nbsp&nbspUsing Node.js, developers will build the full stack of the web applications by themselves,
+    but it's not hard. They freely created the http server, view logic or request handler as they
+    need. By building the web application, they are building the system at the same time.	</p>
 	
 	</div>	
 </body>
